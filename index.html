@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0MQMF0S4CR"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+gtag('js', new Date());
+gtag('config', 'G-0MQMF0S4CR');
+
+const params = new URLSearchParams(window.location.search);
+
+const evento = params.get("evento");
+const destino = params.get("destino");
+
+gtag('event', evento);
+
+setTimeout(()=>{
+window.location.href = destino;
+},500);
+
+</script>
+
+</head>
+<body>
+Cargando actividad...
+</body>
+</html>
